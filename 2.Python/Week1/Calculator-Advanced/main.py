@@ -1,3 +1,10 @@
+# Thought normal cal would be too easy so implemented more fun version
+# in takes an mathematical expresison and calculates its output
+# main idea is in recursion the answer of a+b is know only of we know answer of a and b 
+# where a,b or left and right part of expression acordingly
+# Since it is a recursion we can add priory of the mathematic operations by simply writing it in reverse order
+# Hence we process +,- first and *,/ last by recursion it would firstly calculate *,/ then +,-
+
 def calc(s):
     plus_ind = s.rfind('+')
     minus_ind = s.rfind('-')
@@ -19,5 +26,8 @@ def calc(s):
 
     return float(s)
 
-expression = input("Enter expression: ")
-print("Result:", calc(expression))
+try:
+    expression = input("Enter expression: ")
+    print("Result:", calc(expression))
+except ValueError:
+    raise ValueError("Incorectr Mathematical expression")
