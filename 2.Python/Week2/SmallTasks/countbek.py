@@ -3,7 +3,6 @@ def word_count(text: str):
 # sorts text for O(nlogn) and then count amount of similar neoighbours 
 # sicnce text is sorted all similar elements would be neighbours
 # Hence we can count them all by (O(n))
-
     text.sort()
     std_map = []
 

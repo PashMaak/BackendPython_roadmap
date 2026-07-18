@@ -2,6 +2,7 @@
 # the left bound is 0 and right bound is 101
 # and for the implementation i used half-interval [l, r) for easy math
 
+l, r = 0, 101
 while r - l > 1:
     m = (l + r) >> 1
 
